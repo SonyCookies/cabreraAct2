@@ -1,0 +1,62 @@
+<%- include('partials/start') %> <%- include('partials/sidebar') %>
+
+<div class="main-container">
+  <%- include('partials/topbar') %>
+
+  <div class="music-head">
+    <img src="../../public/img/liked-songs-300.png" />
+    <section class="music-details">
+      <div>
+        <p>Playlist</p>
+        <p>Liked Songs</p>
+        <p>200 songs</p>
+      </div>
+      <div>
+        <i class="fa fa-play">&nbsp; </i>
+        <i class="fa fa-plus">&nbsp; </i>
+        <i class="fa fa-ellipsis-h">&nbsp; </i>
+      </div>
+    </section>
+  </div>
+
+  <div class="button-container">
+    <button class="play-button">
+      <span class="material-symbols-sharp"> play_arrow </span>
+    </button>
+    <button class="list-button">
+      <span class="material-symbols-sharp"> list </span>
+    </button>
+  </div>
+
+  <hr />
+
+  <ul class="music-list">
+    <li>
+      <p>1. Salamin Salamin</p>
+      <p>BINI</p>
+      <p>3:37</p>
+      <p>Talaarawan</p>
+    </li>
+    <li>
+      <p>2. Cherry on Top</p>
+      <p>BINI</p>
+      <p>3:24</p>
+      <p>Single</p>
+    </li>
+    <li>
+      <p>3. Pantropiko</p>
+      <p>BINI</p>
+      <p>2:53</p>
+      <p>Talaarawan</p>
+    </li>
+    <li>
+      <p>4. Karera</p>
+      <p>BINI</p>
+      <p>3:21</p>
+      <p>Talaarawan</p>
+    </li>
+  </ul>
+
+  <%- include('partials/preview') %>
+</div>
+<%- include('partials/end') %>

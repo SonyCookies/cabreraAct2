@@ -1,0 +1,591 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 196px;
+  background-color: #000000;
+  padding: 24px;
+}
+.sidebar .logo img {
+  width: 130px;
+}
+.sidebar .navigation ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.sidebar .navigation ul li {
+  padding: 10px 0px;
+}
+.sidebar .navigation ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+.sidebar .navigation ul li a:hover,
+.sidebar .navigation ul li a:active,
+.sidebar .navigation ul li a:focus {
+  color: #ffffff;
+}
+.sidebar .navigation ul li a:hover .fa,
+.sidebar .navigation ul li a:active .fa,
+.sidebar .navigation ul li a:focus .fa {
+  color: #b3b3b3;
+}
+.sidebar .navigation ul li .fa {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.sidebar .navigation ul li a:hover .fa:hover,
+.sidebar .navigation ul li a:hover .fa:active,
+.sidebar .navigation ul li a:hover .fa:focus {
+  color: #ffffff;
+}
+.sidebar .policies {
+  position: absolute;
+  bottom: 100px;
+}
+.sidebar .policies ul {
+  list-style: none;
+}
+.sidebar .policies ul li {
+  padding-bottom: 5px;
+}
+.sidebar .policies ul li a {
+  color: #b3b3b3;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 10px;
+}
+.sidebar .policies ul li a:hover,
+.sidebar .policies ul li a:active,
+.sidebar .policies ul li a:focus {
+  text-decoration: underline;
+}
+
+.main-container {
+  margin-left: 245px;
+  margin-bottom: 100px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #101010;
+  padding: 14px 30px;
+}
+.topbar .prev-next-buttons button {
+  color: #7a7a7a;
+  cursor: not-allowed;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  font-size: 18px;
+  border: 0px;
+  background-color: #090909;
+  margin-right: 10px;
+}
+.topbar .navbar {
+  display: flex;
+  align-items: center;
+}
+.topbar .navbar ul {
+  list-style: none;
+}
+.topbar .navbar ul li {
+  display: inline-block;
+  margin: 0px 8px;
+  width: 70px;
+}
+.topbar .navbar ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:active,
+.topbar .navbar ul li a:focus {
+  color: #ffffff;
+  font-size: 15px;
+}
+.topbar .navbar ul li.divider {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0px 20px;
+  width: auto;
+}
+.topbar .navbar button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+  background-color: #f2f2f2;
+}
+.spotify-playlists {
+  padding: 20px 40px;
+}
+.spotify-playlists h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.spotify-playlists .list {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+.spotify-playlists .list .item {
+  min-width: 140px;
+  width: 160px;
+  padding: 15px;
+  background-color: #181818;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+.spotify-playlists .list .item:hover {
+  background-color: #252525;
+}
+.spotify-playlists .list .item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.spotify-playlists .list .item .play {
+  position: relative;
+}
+.spotify-playlists .list .item .play .fa {
+  position: absolute;
+  right: 10px;
+  top: -60px;
+  padding: 18px;
+  background-color: #1db954;
+  border-radius: 100%;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+.spotify-playlists .list .item:hover .play .fa {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.spotify-playlists .list .item h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spotify-playlists .list .item p {
+  color: #989898;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.spotify-playlists hr {
+  margin: 70px 0px 0px;
+  border-color: #636363;
+}
+
+.preview {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #ae2896, #509bf5);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.preview h6 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.preview p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.preview button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.music-head {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(130, 20, 100, 0.9),
+      rgba(22, 27, 49, 0.9)
+    ),
+    url("https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-0/s480x480/22089365_1390820531034726_4541129191479079887_n.jpg?oh=0586556240f07b0f5cebba14314683b2&oe=5AAF8A6A");
+  background-position: top;
+  color: #fff;
+
+  padding: 2.5rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.music-head img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.music-details {
+  font-size: 2.6rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 2rem;
+}
+
+.music-details div:nth-child(1) {
+  font-size: 2.6rem;
+  margin-bottom: auto;
+}
+
+.music-details div:nth-child(2) {
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.music-details div:nth-child(2) i.fa {
+  font-size: 2.2rem;
+  padding: 0 2rem;
+}
+
+.music-details div:nth-child(1) p:first-child {
+  font-size: 0.8rem;
+  color: var(--color-text-2);
+  text-shadow: var(--shadow-dark);
+}
+
+.music-details div:nth-child(1) p:nth-child(2) {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.9rem 0;
+}
+.music-details div:nth-child(1) p:last-child {
+  font-size: 1rem;
+  margin: 0.9rem 0;
+}
+
+.music-list {
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 0rem 2rem;
+  margin-right: 25%;
+  flex: 1 0 auto;
+}
+
+.music-list li {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  min-height: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.music-list li:hover,
+.music-list li:nth-child(2n):hover {
+  filter: brightness(150%);
+}
+.music-list li:nth-child(2n) {
+  background-color: var(--color-grey-light);
+}
+
+.music-list li p {
+  flex: 0 0 25%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+.play-button,
+.list-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff; /* Adjust color as needed */
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.play-button span {
+  font-size: 4rem;
+}
+
+.premium-offer {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.promo-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.promo-header p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.promo-header small {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.promo-header small a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 12px 25px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #1db954;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.plans-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.plans-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.plans-section p {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 30px;
+}
+
+.payment-methods img {
+  margin: 0 10px;
+}
+
+.more-methods {
+  margin-top: 10px;
+  color: #1db954;
+  font-weight: 600;
+}
+
+.premium-benefits {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #000000;
+}
+
+.premium-benefits h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.premium-benefits ul {
+  list-style: none;
+}
+
+.premium-benefits ul li {
+  margin: 10px 0;
+  color: #b3b3b3;
+}
+
+.library-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-title {
+  display: flex;
+  align-items: center;
+}
+
+.library-title h1 {
+  font-size: 24px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.material-icons {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.library-actions i {
+  margin-left: 15px;
+}
+
+.library-filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #282828;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.filter-btn.active {
+  background-color: white;
+  color: black;
+}
+
+.playlist-table {
+  width: 100%;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #282828;
+}
+
+.playlist-details {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-details img {
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.playlist-name {
+  font-weight: bold;
+  color: white;
+}
+
+.playlist-meta {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.playlist-item span {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.laptop-image img {
+  width: 60%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.cta-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.cta-text p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #b3b3b3;
+}
+
+.download-btn {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #1aa34a;
+}
